@@ -1,0 +1,16 @@
+.aptitude
+.bash_logout
+.bash_history
+.cache
+.dbshell
+.forever
+.gvimrc
+.mysql_history
+.npm
+.pearrc
+.ssh
+.sudo*
+.vim-cache*
+.vim/*
+.viminfo
+[^.]*
