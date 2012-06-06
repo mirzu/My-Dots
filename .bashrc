@@ -126,3 +126,12 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
+# Drush for 4k structured sites.
+function ddrush() {
+  dir='slc'
+  u=`whoami`
+  /usr/bin/drush -l http://local.$dir $@
+}
+
+alias d=ddrush
+
