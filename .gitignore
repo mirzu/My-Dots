@@ -7,6 +7,7 @@
 .gvimrc
 .mysql_history
 .npm
+.npmrc
 .pearrc
 .ssh
 .sudo*

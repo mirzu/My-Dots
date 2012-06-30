@@ -1,0 +1,3 @@
+color molokai
+:set guifont=Monaco:h18
+au BufNewFile,BufRead *.install set filetype=php
