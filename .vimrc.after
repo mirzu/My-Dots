@@ -1,3 +1,43 @@
-color molokai
+color colorer
+set nonumber
+set wrap
 :set guifont=Monaco:h18
 au BufNewFile,BufRead *.install set filetype=php
+
+" From https://bitbucket.org/tabo/dotfiles/src/009f73ebf82d/.vimrc.after
+" The default statusline in janus is pretty bad, improve it
+if has("statusline")
+    " taken from janus/vim/core/before/plugin/statuline.vim (63c0aac004)
+
+    " Start the status line
+    set statusline=%f
+
+    " Add fugitive if enabled
+    if janus#is_plugin_enabled('fugitive')
+        set statusline+=%{fugitive#statusline()}
+    endif
+
+    " Add syntastic if enabled
+    if janus#is_plugin_enabled('syntastic')
+        set statusline+=%#warningmsg#
+        set statusline+=%{SyntasticStatuslineFlag()}
+        set statusline+=%*
+    endif
+
+    " end of janus copy&paste, we use our own ruler, a useful one
+
+    " begin right section
+    set statusline+=%=
+
+    " buffer
+    set statusline+=\:\b%n
+
+    " some properties
+    set statusline+=%M " modifiable?
+    set statusline+=%R " read only?
+    set statusline+=%H " help buffer?
+    set statusline+=%W " preview window?
+    set statusline+=%Y " file type
+    set statusline+=,%{&encoding},%{&fileformat}
+    set statusline+=\ %l,%c%V\ %P " classic vim ruler
+endif
