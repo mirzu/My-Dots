@@ -1,1 +1,1 @@
-/home/mirzu/.vim/janus/vim/vimrc
+/Users/mirzu/.vim/janus/vim/vimrc
