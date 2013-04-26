@@ -1,5 +1,4 @@
 export PATH=$PATH:/usr/local/sbin
-export PATH=/Applications/MAMP/bin/php/php5.3.6/bin:/Applications/MAMP/bin/php/php5.2.17/bin:/Applications/MAMP/Library/bin:$PATH
 
 EDITOR=mvim
 umask 0002
